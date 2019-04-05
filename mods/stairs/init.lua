@@ -337,8 +337,8 @@ function stairs.register_stair_inner(subname, recipeitem, groups, images,
 		minetest.register_craft({
 			output = 'stairs:stair_inner_' .. subname .. ' 7',
 			recipe = {
-				{ "", recipeitem, ""},
-				{ recipeitem, "", recipeitem},
+				{"", recipeitem, ""},
+				{recipeitem, "", recipeitem},
 				{recipeitem, recipeitem, recipeitem},
 			},
 		})
@@ -417,8 +417,7 @@ function stairs.register_stair_outer(subname, recipeitem, groups, images,
 		minetest.register_craft({
 			output = 'stairs:stair_outer_' .. subname .. ' 6',
 			recipe = {
-				{ "", "", ""},
-				{ "", recipeitem, ""},
+				{"", recipeitem, ""},
 				{recipeitem, recipeitem, recipeitem},
 			},
 		})
@@ -813,7 +812,7 @@ stairs.register_stair_and_slab(
 stairs.register_stair_and_slab(
 	"ice",
 	"default:ice",
-	{cracky = 3, puts_out_fire = 1, cools_lava = 1, slippery = 3},
+	{cracky = 3, cools_lava = 1, slippery = 3},
 	{"default_ice.png"},
 	"Ice Stair",
 	"Ice Slab",
@@ -824,7 +823,7 @@ stairs.register_stair_and_slab(
 stairs.register_stair_and_slab(
 	"snowblock",
 	"default:snowblock",
-	{crumbly = 3, puts_out_fire = 1, cools_lava = 1, snowy = 1},
+	{crumbly = 3, cools_lava = 1, snowy = 1},
 	{"default_snow.png"},
 	"Snow Block Stair",
 	"Snow Block Slab",
@@ -863,7 +862,7 @@ stairs.register_stair_inner(
 	{"stairs_glass_stairside.png^[transformR270", "default_glass.png",
 	"stairs_glass_stairside.png^[transformFX", "default_glass.png",
 	"default_glass.png", "stairs_glass_stairside.png"},
-	"Glass Inner Stair",
+	"Glass Stair",
 	default.node_sound_glass_defaults(),
 	false
 )
@@ -875,7 +874,7 @@ stairs.register_stair_outer(
 	{"stairs_glass_stairside.png^[transformR90", "default_glass.png",
 	"stairs_glass_outer_stairside.png", "stairs_glass_stairside.png",
 	"stairs_glass_stairside.png^[transformR90","stairs_glass_outer_stairside.png"},
-	"Glass Outer Stair",
+	"Glass Stair",
 	default.node_sound_glass_defaults(),
 	false
 )
@@ -909,7 +908,7 @@ stairs.register_stair_inner(
 	{"stairs_obsidian_glass_stairside.png^[transformR270", "default_obsidian_glass.png",
 	"stairs_obsidian_glass_stairside.png^[transformFX", "default_obsidian_glass.png",
 	"default_obsidian_glass.png", "stairs_obsidian_glass_stairside.png"},
-	"Obsidian Glass Inner Stair",
+	"Obsidian Glass Stair",
 	default.node_sound_glass_defaults(),
 	false
 )
@@ -921,7 +920,7 @@ stairs.register_stair_outer(
 	{"stairs_obsidian_glass_stairside.png^[transformR90", "default_obsidian_glass.png",
 	"stairs_obsidian_glass_outer_stairside.png", "stairs_obsidian_glass_stairside.png",
 	"stairs_obsidian_glass_stairside.png^[transformR90","stairs_obsidian_glass_outer_stairside.png"},
-	"Obsidian Glass Outer Stair",
+	"Obsidian Glass Stair",
 	default.node_sound_glass_defaults(),
 	false
 )

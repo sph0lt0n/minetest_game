@@ -1756,7 +1756,7 @@ mts_save("small_pine_tree", {
 		L, L, T, L, L,
 		_, L, T, L, _,
 		_, L, T, L, _,
-		_, L, L, L, _,
+		_, L, T, L, _,
 		_, L, L, L, _,
 		_, _, L, _, _,
 		_, _, L, _, _,
@@ -1834,7 +1834,7 @@ mts_save("small_pine_tree_from_sapling", {
 		L, L, B, L, L,
 		_, L, B, L, _,
 		_, L, B, L, _,
-		_, L, L, L, _,
+		_, L, B, L, _,
 		_, L, L, L, _,
 		_, _, L, _, _,
 		_, _, L, _, _,
@@ -1914,7 +1914,7 @@ mts_save("snowy_small_pine_tree_from_sapling", {
 		L, L, B, L, L,
 		S, L, B, L, S,
 		_, L, B, L, _,
-		_, L, L, L, _,
+		_, L, B, L, _,
 		_, L, L, L, _,
 		_, S, L, S, _,
 		_, _, L, _, _,
@@ -2050,15 +2050,50 @@ local R = {name = "default:cactus", prob = 255, param2 = 20, force_place = true}
 local E = {name = "default:cactus", prob = 127, param2 = 20}
 
 mts_save("large_cactus", {
-	size = {x = 5, y = 7, z = 1},
+	size = {x = 5, y = 7, z = 5},
 	data = {
+		_, _, _, _, _,
+		_, _, _, _, _,
+		_, _, _, _, _,
+		_, _, _, _, _,
+		_, _, _, _, _,
+		_, _, _, _, _,
+		_, _, _, _, _,
+
+		_, _, _, _, _,
+		_, _, _, _, _,
+		_, _, _, _, _,
+		_, _, _, _, _,
+		_, _, _, _, _,
+		_, _, _, _, _,
+		_, _, _, _, _,
+
 		_, _, R, _, _,
-		_, _, C, _, _,
+		_, _, R, _, _,
 		_, _, C, _, _,
 		C, C, C, C, C,
 		C, _, C, _, C,
 		E, _, C, _, E,
 		_, _, C, _, _,
+
+		_, _, _, _, _,
+		_, _, _, _, _,
+		_, _, _, _, _,
+		_, _, _, _, _,
+		_, _, _, _, _,
+		_, _, _, _, _,
+		_, _, _, _, _,
+
+		_, _, _, _, _,
+		_, _, _, _, _,
+		_, _, _, _, _,
+		_, _, _, _, _,
+		_, _, _, _, _,
+		_, _, _, _, _,
+		_, _, _, _, _,
+	},
+	yslice_prob = {
+		{ypos = 2, prob = 127},
 	},
 })
 
@@ -2080,44 +2115,6 @@ mts_save("papyrus", {
 		{ypos = 2, prob = 127},
 		{ypos = 3, prob = 127},
 	},
-})
-
-
--- Corals
-
-local C = {name = "default:coral_brown", prob = 255, force_place = true}
-local c = {name = "default:coral_brown", prob = 191, force_place = true}
-local O = {name = "default:coral_orange", prob = 255, force_place = true}
-local o = {name = "default:coral_orange", prob = 191, force_place = true}
-local X = {name = "default:coral_skeleton", prob = 255, force_place = true}
-local x = {name = "default:coral_skeleton", prob = 63, force_place = true}
-
-mts_save("corals", {
-	size = {x = 5, y = 3, z = 5},
-	data = {
-		_, _, _, _, _,
-		o, C, O, c, _,
-		_, C, x, _, _,
-
-		_, _, X, _, _,
-		C, O, O, C, o,
-		c, c, O, o, x,
-
-		_, X, X, X, _,
-		c, C, C, O, O,
-		O, C, O, C, c,
-
-		_, _, X, _, _,
-		x, O, C, O, C,
-		_, x, C, O, _,
-
-		_, _, _, _, _,
-		_, o, O, C, c,
-		_, _, o, _, _,
-	},
-	yslice_prob = {
-		{ypos = 2, prob = 127},
-	}
 })
 
 
